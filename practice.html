@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla Challenge</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="header">
+      <form id="nameForm"> 
+         <input type="text" placeholder="Name" style="font-size: 8px; width: 64px;" required > 
+         <button type="submit" style="font-size: 11px;"> Login </button>
+      </form>
+      <span id="welcomeContainer" style="font-size:14px;"> Enter your name on the left</span>
+      <span id="clockContainer"  style="font-size:14px;">  00:00:12</span>
+    </div>
+    <main>
+      <div id="userEmptyLeft"></div>
+      <div id="userInfo"><p id="ballon">Hi</p></div>
+      <div id="userEmptyRight"></div>
+
+      <div id="todoForm" style="font-size:smaller;"> <span> What city is left to go?</span><form><input required type="text" /></form>
+      <ul id=cityList></ul></div>
+
+      <div id="randomImage"></div>
+      <div id="emptySpace"> </div>
+    </main>
+
+    <script src="clock.js"></script>
+    <script src="weather.js"></script>
+    <script src="name.js"></script>
+    <script src="randomImage.js"></script>
+    <script src="todo.js"></script>
+  </body>
+</html>

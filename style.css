@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Ubuntu', 'Raleway', sans-serif;    
+}
+  
+button {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 2px;
+  transition: 1s;
+  color:white;
+}
+button:hover{
+  color:Blue;;
+  background: linear-gradient(0deg, grey, grey);
+  padding: 0px;
+}
+
+#header{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: grey;
+  color: aliceblue;
+  height: 9vh; 
+  height: 23px;
+}
+
+#nameForm {
+  padding-left: 10px;
+  align-content: center;
+  display:inline-flex
+}
+
+#clockContainer {
+  padding-right: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* Main */
+
+main {
+  
+  display: grid;
+  grid-template-columns :  repeat(5,1fr);
+  grid-template-rows : repeat(5,150px);
+  grid-template-areas: 
+  "userEmptyLeft userEmptyLeft userEmptyLeft userInfo userEmptyRight"
+  "todoForm todoForm randomImage randomImage randomImage"
+  "todoForm todoForm randomImage randomImage randomImage"
+  "todoForm todoForm randomImage randomImage randomImage"
+  "emptySpace emptySpace emptySpace emptySpace emptySpace";
+}
+#userEmptyLeft{
+  grid-area:userEmptyLeft;
+}
+#userInfo{
+  grid-area:userInfo;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+}
+#userInfo img{
+  z-index: -1;
+  width: 300px;
+  height: 130px;
+}
+#userEmptyRight{
+  grid-area:userEmptyRight;
+}
+#todoForm{
+  grid-area:todoForm;
+  align-self: flex-start;
+  justify-self: center;
+  
+}
+
+#randomImage{
+  grid-area:randomImage;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+#randomImage img{
+  max-height: 350px;
+  min-height: 350px;
+  width:auto;
+}
+#emptySpace{
+  grid-area:emptySpace;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+}
+ul li button img {
+  width:20px;
+  height:auto;
+  pointer-events: none;
+}
+
+ul {
+ list-style: none;
+ font-size: 20px;
+}
+
+#ballon {
+  display: flex;
+  position: absolute;
+  width: 280px;
+  height: 40px;
+  background: skyblue;
+  color: white;
+  border-radius: 5px;
+  padding: 12px 12.8px;
+  z-index:1;
+}
+
+
+#ballon:after {
+  border-top: 10px solid skyblue;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 160px;
+}
